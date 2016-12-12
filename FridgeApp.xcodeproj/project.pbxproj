@@ -15,6 +15,7 @@
 		33EDFFD91DE45AC400F362ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33EDFFD71DE45AC400F362ED /* LaunchScreen.storyboard */; };
 		33EDFFE41DE45AC400F362ED /* FridgeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDFFE31DE45AC400F362ED /* FridgeAppTests.swift */; };
 		33EDFFEF1DE45AC400F362ED /* FridgeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDFFEE1DE45AC400F362ED /* FridgeAppUITests.swift */; };
+		33EDFFFF1DE45BCE00F362ED /* FoodManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDFFFE1DE45BCE00F362ED /* FoodManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		33EDFFEA1DE45AC400F362ED /* FridgeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FridgeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33EDFFEE1DE45AC400F362ED /* FridgeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeAppUITests.swift; sourceTree = "<group>"; };
 		33EDFFF01DE45AC400F362ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33EDFFFE1DE45BCE00F362ED /* FoodManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				33EDFFCC1DE45AC400F362ED /* AppDelegate.swift */,
 				33EDFFCE1DE45AC400F362ED /* FirstViewController.swift */,
 				33EDFFD01DE45AC400F362ED /* SecondViewController.swift */,
+				33EDFFFE1DE45BCE00F362ED /* FoodManager.swift */,
 				33EDFFD21DE45AC400F362ED /* Main.storyboard */,
 				33EDFFD51DE45AC400F362ED /* Assets.xcassets */,
 				33EDFFD71DE45AC400F362ED /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 				33EDFFD11DE45AC400F362ED /* SecondViewController.swift in Sources */,
 				33EDFFCD1DE45AC400F362ED /* AppDelegate.swift in Sources */,
 				33EDFFCF1DE45AC400F362ED /* FirstViewController.swift in Sources */,
+				33EDFFFF1DE45BCE00F362ED /* FoodManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
