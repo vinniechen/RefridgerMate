@@ -12,15 +12,15 @@ import UIKit
 var foodMgr: FoodManager = FoodManager() // creates instance of FoodManager
 
 struct foodItem {
-    var name = "Unnamed"
-    var desc = "Undescribed"
+    var name = "No_Name"
+    var date = "No_Date"
     
 }
 
 class FoodManager: NSObject {
 
     var foods = [foodItem]();
-    func addFood(name: String, desc: String) {
-        foods.append(foodItem(name: name, desc: desc))
+    func addFood(name: String, date: String) {
+        foods.append(foodItem(name: name, date: date))
     }
 }
