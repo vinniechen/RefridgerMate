@@ -21,6 +21,7 @@ class CustomViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         // Connect data delegate, data source:
         self.picker.delegate = self
         self.picker.dataSource = self
+
         
         // Input data into the Array:
         /* var months: [String] = ["Months"]
@@ -46,6 +47,9 @@ class CustomViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         
         // Picker data
         pickerData = [weeks, days]
+        
+        self.picker.delegate = self
+        self.picker.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,11 +64,12 @@ class CustomViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     // The number of rows of data
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData.count
+        return pickerData[component].count
     }
     
     // The data to return for the row and component (column) that's being passed in
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        print(pickerData[component][row])
         return pickerData[component][row]
     }
     
