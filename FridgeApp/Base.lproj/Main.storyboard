@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,28 +14,44 @@
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="FridgeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fhQ-ny-tUm"/>
+                        <viewControllerLayoutGuide type="bottom" id="LBa-nd-RYI"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qkf-Ir-KbS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kot-7U-wyr">
+                                <rect key="frame" x="133" y="20" width="109" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="WHV-zS-f8T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qkf-Ir-KbS">
                                 <rect key="frame" x="0.0" y="71" width="375" height="547"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="547" id="DgH-o2-Z4n"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="9pv-A4-QxB" id="aod-CM-O4p"/>
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="GXU-fR-Rcc"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="My Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kot-7U-wyr">
-                                <rect key="frame" x="134" y="29" width="95" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qkf-Ir-KbS" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="58y-AH-bWg"/>
+                            <constraint firstAttribute="trailing" secondItem="Qkf-Ir-KbS" secondAttribute="trailing" id="JFh-dD-mMe"/>
+                            <constraint firstItem="Qkf-Ir-KbS" firstAttribute="top" secondItem="kot-7U-wyr" secondAttribute="bottom" constant="8" symbolic="YES" id="X0n-ye-47H"/>
+                            <constraint firstItem="Qkf-Ir-KbS" firstAttribute="bottom" secondItem="LBa-nd-RYI" secondAttribute="top" id="aYl-yh-oBC"/>
+                            <constraint firstItem="kot-7U-wyr" firstAttribute="top" secondItem="fhQ-ny-tUm" secondAttribute="bottom" id="pwX-5x-Mbh"/>
+                            <constraint firstItem="Qkf-Ir-KbS" firstAttribute="centerX" secondItem="kot-7U-wyr" secondAttribute="centerX" id="zxT-4N-cxT"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Fridge" image="first" id="acW-dT-cKf"/>
                     <connections>
@@ -49,32 +66,29 @@
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="FridgeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IyY-1p-cyB"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZaS-xI-3lH"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Add Food" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4Df-wI-sIr">
-                                <rect key="frame" x="94" y="50" width="190" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Food" textAlignment="natural" minimumFontSize="17" id="Dfn-d3-axC">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Food" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dfn-d3-axC">
                                 <rect key="frame" x="16" y="140" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date" textAlignment="natural" minimumFontSize="17" id="k6h-d1-XKC">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k6h-d1-XKC">
                                 <rect key="frame" x="16" y="178" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2Ah-VV-UaH">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ah-VV-UaH">
                                 <rect key="frame" x="242" y="216" width="117" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add To Fridge"/>
@@ -82,6 +96,13 @@
                                     <action selector="btnAddFood_ClickWithSender:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="sfM-Rt-gK8"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Food" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Df-wI-sIr">
+                                <rect key="frame" x="92" y="65" width="190" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -94,6 +115,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="468.5" y="399.5"/>
+        </scene>
+        <!--Create Food-->
+        <scene sceneID="2XS-Yo-pvj">
+            <objects>
+                <viewController title="Create Food" id="IV1-hg-ZoT" customClass="CustomViewController" customModule="FridgeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="exb-J1-GZg"/>
+                        <viewControllerLayoutGuide type="bottom" id="0kX-bK-j4P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="blg-ac-h3S">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Create Custom Food" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mD5-Pg-K25">
+                                <rect key="frame" x="66" y="74" width="243" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9t6-RM-YD1">
+                                <rect key="frame" x="0.0" y="173" width="375" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLs-38-jwR">
+                                <rect key="frame" x="235" y="397" width="124" height="30"/>
+                                <state key="normal" title="Add Custom Food"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Custom Food Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iH0-Wc-3eq">
+                                <rect key="frame" x="16" y="135" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fLs-38-jwR" firstAttribute="top" secondItem="9t6-RM-YD1" secondAttribute="bottom" constant="8" id="8sJ-sB-dPB"/>
+                            <constraint firstItem="mD5-Pg-K25" firstAttribute="top" secondItem="exb-J1-GZg" secondAttribute="bottom" constant="54" id="Ajs-Ql-DcP"/>
+                            <constraint firstItem="mD5-Pg-K25" firstAttribute="leading" secondItem="blg-ac-h3S" secondAttribute="leadingMargin" constant="50" id="BWG-Ob-LBL"/>
+                            <constraint firstItem="9t6-RM-YD1" firstAttribute="top" secondItem="iH0-Wc-3eq" secondAttribute="bottom" constant="8" id="HIc-L8-Qlu"/>
+                            <constraint firstAttribute="trailing" secondItem="9t6-RM-YD1" secondAttribute="trailing" id="Sgh-ot-NLJ"/>
+                            <constraint firstItem="iH0-Wc-3eq" firstAttribute="top" secondItem="mD5-Pg-K25" secondAttribute="bottom" constant="22" id="URe-yh-q8A"/>
+                            <constraint firstItem="9t6-RM-YD1" firstAttribute="top" secondItem="iH0-Wc-3eq" secondAttribute="bottom" constant="8" id="Z3l-qF-dDD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mD5-Pg-K25" secondAttribute="trailing" constant="50" id="aaU-78-a5D"/>
+                            <constraint firstItem="fLs-38-jwR" firstAttribute="trailing" secondItem="blg-ac-h3S" secondAttribute="trailingMargin" id="bPl-Kb-GWb"/>
+                            <constraint firstItem="iH0-Wc-3eq" firstAttribute="top" secondItem="mD5-Pg-K25" secondAttribute="bottom" constant="22" id="j9d-eF-4op"/>
+                            <constraint firstItem="iH0-Wc-3eq" firstAttribute="trailing" secondItem="blg-ac-h3S" secondAttribute="trailingMargin" id="kPE-3f-qGb"/>
+                            <constraint firstItem="9t6-RM-YD1" firstAttribute="leading" secondItem="blg-ac-h3S" secondAttribute="leading" id="mHz-bj-nqN"/>
+                            <constraint firstItem="iH0-Wc-3eq" firstAttribute="leading" secondItem="blg-ac-h3S" secondAttribute="leadingMargin" id="rp9-jn-ne2"/>
+                            <constraint firstItem="fLs-38-jwR" firstAttribute="top" secondItem="9t6-RM-YD1" secondAttribute="bottom" constant="8" id="vNh-3Z-cki"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Create Food" image="first" id="LLv-3n-uJ7"/>
+                    <connections>
+                        <outlet property="customName" destination="iH0-Wc-3eq" id="6Kq-aT-AkS"/>
+                        <outlet property="picker" destination="9t6-RM-YD1" id="T4r-Gc-Yy0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xft-m7-Yqc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="468.5" y="1133.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -108,6 +189,7 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="IV1-hg-ZoT" kind="relationship" relationship="viewControllers" id="x6q-g0-Vpd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>

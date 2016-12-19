@@ -64,6 +64,7 @@ class FoodManager: NSObject {
         
         var formattedString = ""
         
+        // prints __ week(s) __ day(s)
         if (weeks > 0) {
             if (days == 1) {
                 formattedString += "\(weeks) week "
@@ -85,6 +86,7 @@ class FoodManager: NSObject {
         return formattedString
     }
     
+    // Returns string of current date in dd-MM-yyyy
     func calculateDate() -> String {
         let NSdate = Date()
         let dateFormatter = DateFormatter()
