@@ -15,6 +15,12 @@ class CustomViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     var pickerData: [[String]] = [[String]]()
     
+    // To be put into database
+    var customFoodName: String = ""
+    var weekShelfLife: Int = 0
+    var dayShelfLife: Int = 0
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -71,6 +77,32 @@ class CustomViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         print(pickerData[component][row])
         return pickerData[component][row]
+    }
+    
+    // Function is triggered when the user makes a change to the picker selection.
+    //The parameter named row and component represents what was selected.
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        // week
+        if (component == 0) {
+            weekShelfLife = row
+        }
+            // day
+        else {
+            dayShelfLife = row
+        }
+        
+    }
+    
+    @IBAction func btnAddCustomFood_Click(_ sender: Any) {
+        // Assign String and Int to be added to database
+        customFoodName = customName.text!
+        if (customFoodName.isEmpty) { // checks that there is food name entered
+            print("Enter a name for your food")
+        }
+        let totalShelfLife = (weekShelfLife * 7) + dayShelfLife
+        if (totalShelfLife) == 0 {
+            print("Add shelf life of at least 1 day")
+        }
     }
     
 

@@ -140,6 +140,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLs-38-jwR">
                                 <rect key="frame" x="235" y="397" width="124" height="30"/>
                                 <state key="normal" title="Add Custom Food"/>
+                                <connections>
+                                    <action selector="btnAddCustomFood_Click:" destination="IV1-hg-ZoT" eventType="touchUpInside" id="Rng-9d-Ub4"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Custom Food Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iH0-Wc-3eq">
                                 <rect key="frame" x="16" y="135" width="343" height="30"/>
