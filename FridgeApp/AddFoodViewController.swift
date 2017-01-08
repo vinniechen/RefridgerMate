@@ -11,7 +11,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     
     // Reference to text boxes in storyboard
     @IBOutlet var txtFood: UITextField!
-    @IBOutlet var txtDate: UITextField!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         foodMgr.addFood(name: txtFood.text!, date: date) // Add food and date to array
         self.view.endEditing(true) // hide keyboard
         txtFood.text! = "" // clear text boxes
-        txtDate.text! = ""
+
         self.tabBarController?.selectedIndex = 0
         
     }

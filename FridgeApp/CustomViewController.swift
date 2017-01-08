@@ -8,12 +8,20 @@
 
 import UIKit
 
+struct FoodShelfLifeItem {
+    var foodName: String!
+    var foodShelfLife: Int!
+}
+
+
 class CustomViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     @IBOutlet weak var customName: UITextField!
     @IBOutlet weak var picker: UIPickerView!
     
     var pickerData: [[String]] = [[String]]()
+    
+    
     
     // To be put into database
     var customFoodName: String = ""

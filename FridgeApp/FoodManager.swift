@@ -23,6 +23,7 @@ class FoodManager: NSObject {
     
     var foods = NSMutableOrderedSet();
     
+    // Add food
     func addFood(name: String, date: String) {
         
         let expDate = setExpirationDate(food: name) // get the expiration date
@@ -33,7 +34,11 @@ class FoodManager: NSObject {
     // Assign expDate in foodItem
     func setExpirationDate(food: String) -> Date {
         // Get shelf life of food
-        let shelfLife = 10 // currently constant val, will change to pull from database
+        var shelfLife: Int! // currently constant val, will change to pull from database
+        
+        shelfLife = DBManager.shared.searchFoodShelfLife(foodName: food)
+        
+        
         
         let addDate = Date()
         let cal = NSCalendar(identifier: NSCalendar.Identifier.gregorian)
