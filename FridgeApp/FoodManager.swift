@@ -36,7 +36,7 @@ class FoodManager: NSObject {
         // Get shelf life of food
         var shelfLife: Int! // currently constant val, will change to pull from database
         
-        shelfLife = DBManager.shared.searchFoodShelfLife(foodName: food)
+        shelfLife = DBManager.shared.searchAddFood(foodName: food)
         
         
         

@@ -60,7 +60,6 @@
 		33130EEA1E189483001B2950 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = "../../../../../Downloads/fmdb-master/src/fmdb/FMResultSet.m"; sourceTree = "<group>"; };
 		33130EEB1E189483001B2950 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../../../../../Downloads/fmdb-master/src/fmdb/Info.plist"; sourceTree = "<group>"; };
 		33130EF21E18953F001B2950 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
-		33130EF51E19F056001B2950 /* movies.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = movies.sqlite; sourceTree = "<group>"; };
 		33130EF81E21CB6B001B2950 /* fridge.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = fridge.sqlite; sourceTree = "<group>"; };
 		33159ED61E0466FC00E9B48E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		33434FC31E0740BD007E4038 /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
@@ -167,7 +166,6 @@
 				33EDFFFE1DE45BCE00F362ED /* FoodManager.swift */,
 				33434FC31E0740BD007E4038 /* CustomViewController.swift */,
 				33130EF81E21CB6B001B2950 /* fridge.sqlite */,
-				33130EF51E19F056001B2950 /* movies.sqlite */,
 				33EDFFD21DE45AC400F362ED /* Main.storyboard */,
 				33EDFFD51DE45AC400F362ED /* Assets.xcassets */,
 				33EDFFD71DE45AC400F362ED /* LaunchScreen.storyboard */,

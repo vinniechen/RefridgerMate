@@ -84,18 +84,25 @@ class DBManager: NSObject {
     }
     
     // Search table food for shelf life of parameter foodName - SELECT
-    func searchFoodShelfLife(foodName: String) -> Int {
+    func searchAddFood(foodName: String) -> Int {
         var shelfLife: Int!
         
         if openDatabase() {
-            let query = "SELECT * FROM food_ShelfLife WHERE foodName=?" // find food based on name
+            let querySearch = "SELECT * FROM food_ShelfLife WHERE foodName=?" // find food based on name
             
             do {
-                let foodResultSet = try database.executeQuery(query, values: [foodName.lowercased()])
+                let foodResultSet = try database.executeQuery(querySearch, values: [foodName.lowercased()])
                 
                 if foodResultSet.next() {
                     shelfLife = Int(foodResultSet.int(forColumn: "shelfLife"))
-                    
+                    do {
+                        // add food to table food_InFridge
+                        let queryAddToFridge = "INSERT INTO food_InFridge (foodName, shelfLife) VALUES (\(foodName), \(shelfLife))"
+                        try database.executeUpdate(queryAddToFridge, values: nil)
+                    }
+                    catch {
+                        print(error.localizedDescription)
+                    }
                 }
                 else { // food not found
                     print("food not found")
@@ -108,5 +115,7 @@ class DBManager: NSObject {
         }
         return shelfLife
     }
+    
+    
     
 }
